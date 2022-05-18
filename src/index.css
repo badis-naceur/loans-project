@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "WorkSans-Regular";
+    src: url(./assets/fonts/static/WorkSans-Regular.ttf);
+}
+@font-face {
+    font-family: "Rubik-Bold";
+    src: url(./assets/fonts/static/Rubik-Bold.ttf);
+}
+
+body {
+    background-color: #f4f8fa;
+}
+
+.card {
+    box-shadow: 0px 16px 32px 0px #1e2a3214;
+    background-color: white;
+    height: 511px;
+    width: 560px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid white;
+    border-radius: 8px;
+    text-align: center;
+}
+.img {
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.ApplyBtn {
+    color: white;
+    background-color: #1b31a8;
+    height: 56px;
+    width: 320px;
+    left: 120px;
+    border-radius: 32px;
+    margin-bottom: 10px;
+}
+.planning {
+    background-color: #f4f8fa;
+}
