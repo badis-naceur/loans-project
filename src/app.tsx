@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
 import InputsAmount from "./pages/amountInputs/input.component"
@@ -15,6 +15,7 @@ const App = (props: any) => {
     const [Ammout, setAmmout] = useState(0)
     const [totalAmmount, setTotalAmmount] = useState(0)
 
+    useEffect(() => {}, [Monthpayment])
     // get the amount loan  Rited
     const Loan = (y: number) => {
         setAmmout(y)
@@ -30,7 +31,10 @@ const App = (props: any) => {
     const getCount = (c: number) => {
         let MonthNumber = Number(c)
         let MonthAmmount = totalAmmount / MonthNumber
-        isNaN(Monthpayment) === true ? setMonthpayment(0) : setMonthpayment(MonthAmmount)
+
+        setMonthpayment(data.min_amount)
+        setMonthpayment(MonthAmmount)
+
         setcount(MonthNumber)
         setdatee(moment().add(c, "M").format("LL"))
     }
@@ -76,7 +80,7 @@ const App = (props: any) => {
                                     marginBottom: 15,
                                     color: "#1B31A8",
                                 }}>
-                                {`$` + Monthpayment.toFixed(2)}
+                                {Monthpayment === undefined ? 0.0 : `$` + Monthpayment.toFixed(2)}
                             </span>
                         </div>
 
